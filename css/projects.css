@@ -1,0 +1,882 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&subset=devanagari,latin-ext");
+
+:root {
+  --primary-white: #f8f8f8;
+  --primary-blue: #0077cc;
+  --primary-darks: #333333;
+  --primary-gold: #e0c351;
+}
+
+/*----------------------------------------------
+------------------------------------------------
+0. CSS Reset
+------------------------------------------------
+----------------------------------------------*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
+  font-family: "Poppins", sans-serif;
+}
+/*----------------------------------------------
+  ------------------------------------------------
+  1. Universal Styles
+  ------------------------------------------------
+  ----------------------------------------------*/
+html {
+  overflow-x: hidden !important;
+}
+
+body {
+  overflow-x: hidden !important;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 400;
+  background-color: #f0f0f0  !important;
+  
+}
+
+p, h1, h2, h3, h5, h6 {
+  color: var(--primary-darks) !important;
+}
+
+p {
+  margin: 0 auto;
+  font-size: 18px;
+  line-height: 2.25rem;
+  max-width: 75ch;
+  margin-bottom: 1.5rem !important;
+}
+
+h1 {
+  font-size: 3.5rem !important;
+  animation: loading 1.2s 0s 1 both ease-in-out;
+  animation-duration: 1.2s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-fill-mode: both;
+  animation-play-state: running;
+  animation-name: loading;
+  animation-timeline: auto;
+  animation-range-start: normal;
+}
+
+h2 {
+  font-size: 2.5rem !important;
+}
+
+h3 {
+  font-size: 1.75rem !important;
+}
+
+/* Logo Styling */
+.logo {
+  width: 12rem;
+  height: auto;
+}
+
+.logo:hover {
+  cursor: pointer;
+}
+
+.logo:hover path {
+  fill: var(--primary-gold);
+  transition: fill 0.2s ease-in-out;
+}
+
+
+/*----------------------------------------------
+  ------------------------------------------------
+  2. Navbar Styles
+  ------------------------------------------------
+  ----------------------------------------------*/
+
+
+.start-header {
+  opacity: 1;
+  transform: translateY(0);
+  padding: 20px 0;
+  box-shadow: 0 10px 30px 0 rgba(138, 155, 165, 0.15);
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+.start-header.scroll-on {
+  box-shadow: 0 5px 10px 0 rgba(138, 155, 165, 0.15);
+  padding: 10px 0;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+.start-header.scroll-on .navbar-brand svg {
+  height: 36px;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+.navigation-wrap {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+  background-color: var(--primary-darks) !important;
+  /* glass effect */
+  /* background-color: rgba(255,255,255,0.5) !important;
+  backdrop-filter: saturate(180%) blur(20px); */
+}
+.navbar {
+  padding: 0;
+}
+.navbar-brand svg {
+  height: 38px;
+  width: auto;
+  display: block;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+  animation: loading 1.2s 0s 1 both ease-in-out;
+}
+.navbar-toggler {
+  float: right;
+  height: 48px !important;
+  border: none !important;
+  padding-right: 0;
+}
+
+.navbar-toggler:active,
+.navbar-toggler:focus,
+.navbar-toggler-icon:active,
+.navbar-toggler-icon:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.navbar-toggler-icon {
+  width: 32px !important;
+  height: 18px !important;
+  background-image: none !important;
+  position: relative !important;
+  border-bottom: 2px solid #fff !important;
+  transition: all 300ms linear !important;
+}
+
+.navbar-toggler-icon:after,
+.navbar-toggler-icon:before {
+  width: 32px !important;
+  position: absolute !important;
+  height: 2px !important;
+  background-color: #fff !important;
+  top: 0 !important;
+  left: 0 !important;
+  content: "";
+  z-index: 2 !important;
+  transition: all 300ms linear !important;
+}
+.navbar-toggler-icon:after {
+  top: 8px !important;
+}
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:after {
+  transform: rotate(45deg) !important;
+}
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:before {
+  transform: translateY(8px) rotate(-45deg) !important;
+}
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
+  border-color: transparent !important;
+}
+.nav-link {
+  color: var(--primary-white) !important;
+  font-size: 20px !important;
+  font-weight: 600;
+  transition: all 200ms linear;
+  animation: loading 1.2s 0s 1 both ease-in-out;
+}
+.nav-item:hover .nav-link {
+  color: var(--primary-gold) !important;
+}
+/* .nav-item.active .nav-link {
+  color: var(--primary-gold) !important;
+} */
+.nav-link {
+  padding: 5px 1.25rem !important;
+}
+.nav-item:after {
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  content: "";
+  background-color: var(--primary-gold);
+  opacity: 0;
+  transition: all 200ms linear;
+}
+.nav-item:hover:after {
+  bottom: 0;
+  opacity: 1;
+}
+.nav-item.active:hover:after {
+  opacity: 0;
+}
+.nav-item {
+  position: relative;
+  transition: all 200ms linear;
+}
+
+.nav-item .dropdown-menu {
+  transform: translate3d(0, 10px, 0) !important;
+  visibility: hidden;
+  opacity: 0;
+max-height: 0;
+  display: block;
+padding: 0;
+margin-top: 0.5rem !important;
+  transition: all 200ms linear;
+}
+.nav-item.show .dropdown-menu {
+  opacity: 1 !important;
+  visibility: visible !important;
+max-height: 999px !important;
+  transform: translate3d(0, 0px, 0) !important;
+}
+.dropdown-menu {
+padding: 10px !important;
+margin: 0;
+font-size: 13px;
+letter-spacing: 1px;
+color: #212121;
+background-color: #fcfaff ;
+border: none;
+border-radius: 3px ;
+box-shadow: 0 5px 10px 0 rgba(138, 155, 165, 0.15);
+  transition: all 200ms linear;
+}
+.dropdown-toggle::after {
+display: none !important;
+}
+
+.dropdown-item {
+padding: 3px 15px !important;
+border-radius: 2px !important; 
+}
+.dropdown-item:hover, 
+.dropdown-item:focus {
+background-color: var(--primary-gold) !important;
+}
+
+/* #Primary style
+================================================== */
+
+.bg-light {
+  background-color: #fff !important;
+  transition: all 200ms linear;
+}
+.section {
+  position: relative;
+  width: 100%;
+  display: block;
+}
+.full-height {
+  height: 100vh;
+}
+
+.project-h1 {
+  padding-top: 8rem;
+  padding-bottom: 3rem;
+}
+
+
+/*----------------------------------------------
+  ------------------------------------------------
+  3. Hero Styles
+  ------------------------------------------------
+  ----------------------------------------------*/
+.Project-Image-Container {
+  display: block;
+  position: relative;
+  margin-top: 6rem;
+  height: 50vh;
+  
+  -webkit-box-shadow: 0px 5px 40px -5px rgba(0,0,0,.5);
+  -moz-box-shadow: 0px 5px 40px -5px rgba(0,0,0,.5);
+  box-shadow: 0px 5px 40px -5px rgba(0, 0, 0, 0.5);
+}
+
+.Project-Image {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background-color: #fff;
+  animation: loading 1.2s 0s 1 both ease-in-out;
+    animation-duration: 1.2s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: both;
+    animation-play-state: running;
+    animation-name: loading;
+    animation-timeline: auto;
+    animation-range-start: normal;
+}
+
+/* braphics */
+
+#braphics-Image {
+  object-fit: contain;
+  background-color: #fff;
+}
+
+/* iterateUX */
+
+#iterateUX-Image {
+  object-fit: contain;
+  background-color: #783CB9;
+}
+
+#Overview-Subtitle-IterateUX {
+ padding-bottom: 2rem !important;
+}
+
+ .iterateUX-svg-container {
+  padding: 0px 12% 120px 12%;
+  margin: 0 auto;
+  max-width: 50vw;
+ }
+
+
+#fun-Image {
+  object-fit: contain;
+}
+
+#fun-image-container {
+  display: flex;
+  flex-direction: row;
+}
+
+
+.Project-Card-Tags {
+  padding: 1rem 0rem;
+  display: flex;
+  flex-wrap: wrap;
+  animation: loading 1.2s 0.45s 1 both ease-in-out;
+  animation-duration: 1.2s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0.45s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-fill-mode: both;
+  animation-play-state: running;
+  animation-name: loading;
+  animation-timeline: auto;
+  animation-range-start: normal;
+}
+
+.Project-Card-Tag {
+  border-radius: 6px;
+  padding: 6px 12px;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--primary-darks);
+  background-color: #fcfcf9;
+  margin-right: 1rem;
+  border: 1px solid rgba(22, 21, 19, 0.1);
+  -webkit-box-shadow: 0px 5px 40px -5px rgba(0,0,0,.5);
+  -moz-box-shadow: 0px 5px 40px -5px rgba(0,0,0,.5);
+  box-shadow: 0px 5px 40px -5px rgba(0, 0, 0, 0.11);
+  }
+
+
+/*----------------------------------------------
+  ------------------------------------------------
+  4. Overview Styles
+  ------------------------------------------------
+  ----------------------------------------------*/
+.Project-Overview {
+  padding: 80px 12% 120px 12%;
+}
+
+.Project-Overview-Box {
+  background-color: #fcfcf9;
+  border-radius: 12px;
+  padding: 6%;
+  border: 1px solid rgba(22, 21, 19, 0.1);
+  -webkit-box-shadow: 0px 5px 40px -5px rgba(0,0,0,.5);
+  -moz-box-shadow: 0px 5px 40px -5px rgba(0,0,0,.5);
+  box-shadow: 0px 5px 40px -5px rgba(0, 0, 0, 0.11);
+  animation: loading 1.2s 0.45s 1 both ease-in-out;
+  animation-duration: 1.2s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0.45s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-fill-mode: both;
+  animation-play-state: running;
+  animation-name: loading;
+  animation-timeline: auto;
+  animation-range-start: normal;
+  }
+
+.Overview-Subtitle {
+  margin: 0 auto;
+  padding-bottom: 1rem;
+  max-width: 47.5ch;
+}
+
+.Project-Overview-Image-Container {
+  display: block;
+  margin: 0 auto;
+  position: relative;
+  padding-top: 1.5rem;
+  /* max-width: 47.5ch; */
+}
+
+.Project-Overview-Image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/*----------------------------------------------
+  ------------------------------------------------
+  5. Case Study Styles
+  ------------------------------------------------
+  ----------------------------------------------*/
+  .Project-Case-Study {
+    padding: 0px 12% 120px 12%;
+    
+  }
+  
+  .Project-Section {
+    margin-bottom: 8rem;
+  }
+
+  .Case-Study-Bold {
+    font-weight: 600 !important;
+  }
+
+  .See-Prototype-Link {
+    margin: 0 auto;
+    float: left;
+  }
+
+  
+.Project-Card {
+  border-radius: 12px;
+  width: 100%;
+  padding: 6%;
+  position: relative;
+  transition: 0.2s ease !important;
+  border: 1px solid rgba(22, 21, 19, 0.1);
+  background-color: #fcfcf9;
+}
+
+.Project-Card:hover {
+  cursor: pointer;
+  -moz-transform: scale(1.03) !important;
+  -webkit-transform: scale(1.03) !important;
+  -ms-transform: scale(1.03) !important;
+  transform: scale(1.03) !important;
+    box-shadow: 0px 5px 40px -5px rgba(0, 0, 0, 0.11);
+    border: 1px #ececec solid;
+}
+
+.Project-Card:not(:last-child) {
+  margin-bottom: 2rem;
+}
+
+.logo-sm {
+  width: 40px;
+  height: auto;
+}
+
+#Project-Link {
+  text-decoration: none;
+  color: var(--primary-darks);
+  border-radius: 12px;
+  margin: 1rem 0rem;
+  /* padding: 6%; */
+  
+}
+
+.Project-Card-Title {
+  padding-top: 3%;
+  font-size: 4vh;
+  font-weight: 600;
+  color: var(--primary-darks);
+}
+
+.Project-Card-Description {
+  font-size: 20px;
+  padding-top: 3%;
+  max-width: 40ch;
+}
+
+.Case-Study-Image-Container {
+  display: block;
+  position: relative;
+  height: 40vh;
+}
+
+.Case-Study-Image-Container img:hover {
+  cursor: pointer;
+}
+
+.Case-Study-Image {
+  display: block;
+  /* margin: 0 auto; */
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.Video-Container video{
+  display: block !important;
+  margin: 0 auto !important;
+}
+
+.Case-Study-UL {
+  margin: 0 auto;
+  font-size: 18px;
+  line-height: 2.25rem;
+  max-width: 75ch;
+  margin-bottom: 1.5rem !important;
+}
+
+.Case-Study-Split {
+  display: flex;
+  flex-direction: row;
+  max-width: 88ch;
+  margin: 0 auto;
+}
+
+.Case-Study-Split-Icon {
+  display: flex;
+  margin: 0 auto;
+  padding: 2rem 0rem;
+}
+
+.Case-Study-Split-Icon svg{
+  margin: 0 auto;
+}
+
+.Case-Study-Col-1 {
+  flex: 50%;
+  padding: 1rem;
+  margin-right: 1rem;
+}
+
+.Case-Study-Col-2 {
+  flex: 50%;
+  padding: 1rem;
+  margin-left: 1rem;
+}
+
+
+
+
+
+/*----------------------------------------------
+  ------------------------------------------------
+  6. Footer Styles
+  ------------------------------------------------
+  ----------------------------------------------*/
+  Footer {
+    background-color: var(--primary-darks);
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 0rem;
+  }
+  
+  #Skills-Title {
+    margin: 0 auto 1.5rem;
+  }
+  
+  
+  .Footer-Text {
+    color: var(--primary-white);
+    margin: 0 auto;
+    margin-bottom: 0;
+  }
+  
+  .Footer-Info {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .Footer-Logo {
+    display: flex;
+    flex-direction: column;
+    flex: 50%;
+    padding-left: 10%;
+  }
+  
+  .External-Links-Container {
+    padding-top: 2rem;
+  }
+  
+  .External-Links {
+    margin-right: 1rem;
+    fill: var(--primary-white);
+  }
+  
+  .External-Links:hover {
+    fill: var(--primary-gold);
+    cursor: pointer;
+  }
+  
+  .Footer-Links {
+    flex: 25%;
+    text-align: left;
+    float: left;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  #Footer-Text-Links {
+    color: var(--primary-white);
+    width: fit-content;
+    text-align: left;
+    
+    font-size: 19px;
+    margin: 0 !important;
+    margin: 0.5rem 0rem !important;
+    text-decoration: none;
+  }
+  
+  #Footer-Text-Links:hover {
+    color: var(--primary-gold);
+    cursor: pointer;
+  }
+  
+  #Footer-Title {
+    font-size: 1.5rem;
+    color: var(--primary-white);
+    border-bottom: 0.0625rem solid var(--primary-white);
+    width: fit-content;
+    
+  }
+  
+  .Footer-Text-Copyright {
+    padding-top: 5rem;
+    color: var(--primary-white) !important;
+  }
+
+  /*----------------------------------------------
+    ------------------------------------------------
+    7. Mobile Styles
+    ------------------------------------------------
+    ----------------------------------------------*/
+  
+  /* Small devices (landscape phones, 576px and up) */
+  @media (max-width: 576px) {
+    .Case-Study-Image-Container {
+      height: 15vh;
+    }
+  }
+  
+  /* Medium devices (tablets, 768px and up) */
+  @media (max-width: 768px) {
+ 
+    h1 {
+      font-size: 2.5rem !important;
+    }
+
+    h2 {
+      font-size: 2rem !important;
+    }
+    
+    h3 {
+      font-size: 1.5rem !important;
+    }
+ 
+    .Case-Study-Split {
+      flex-direction: column;
+    }
+
+    .Case-Study-Col-1 {
+      margin-right: 0rem;
+    }
+    
+    .Case-Study-Col-2 {
+      margin-left: 0rem;
+    }
+
+/* iterateUX */
+  .iterateUX-svg-container {
+    max-width: 90vw;
+    }
+
+  #fun-image-container {
+    height: auto;
+    flex-direction: column;
+    /* padding-bottom: 1rem; */
+  }
+
+  #fun-image {
+    padding-bottom: 1rem;
+  }
+
+  .Project-Card-Tag { 
+    margin-top: 1rem !important;
+  }
+
+  .Project-Card-Title { 
+    font-size: 1.5rem;
+    padding-bottom: 2rem;
+  }
+  .Project-Card-Description { 
+    /* font-size: 1.5rem; */
+    padding-bottom: 4rem;
+  }
+  
+  
+  
+    /* #Footer Section
+  ================================================== */
+    .Footer-Info {
+      flex-direction: column;
+    }
+  
+    .Footer-Logo {
+      flex: 50%;
+      padding-left: 20%;
+      padding-top: 1.5rem;
+      padding-bottom: 2rem;
+    }
+  
+    #Footer-Text-Links {
+      padding-left: 20%;
+      padding-top: 0.5rem;
+    }
+  
+    #Footer-Title {
+      margin-top: 2.5rem;
+      margin-left: 20%;
+      font-size: 1.5rem;
+    }
+  
+    .Footer-Text-Copyright {
+      margin-top: 1.5rem;
+      text-align: center;
+    }
+  }
+
+
+
+  @media (max-width: 1266px) {
+    #fun-image-container {
+      height: auto;
+      flex-direction: column;
+    }
+    #fun-image {
+      padding-bottom: 1rem;
+    }
+  
+  }
+
+
+  @media (max-width: 2266px) {
+    #braphics-image-container{
+      height: auto;
+      flex-direction: column !important;
+    }
+    .image-braphics{
+      padding-bottom: 1rem;
+    }
+  }
+
+/* ////////////////////////////////////
+// Keyframes ////////////////////
+////////////////////////////////// */
+
+
+@keyframes loading {
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+  }
+  }
+
+
+  .loader-wrapper {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #0077cc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+  }
+  
+  .load-logo {
+    fill: #fff;
+    display: block;
+    
+  }
+  .load-logo * {
+    fill: #fff;
+    stroke: var(--primary-gold);
+    stroke-width: 1;
+    fill-opacity: 0;
+    stroke-dasharray: 350;
+    stroke-dashoffset: 440;
+  }
+  
+  .load-logo #bp_svg * {
+    animation-name: dash, run;
+    animation-duration: 3s;
+    animation-timing-function : ease-in-out, ease-in-out;
+    animation-fill-mode : forwards;
+    animation-delay : 0.2s;
+  }
+  
+  @keyframes dash {
+    10% {
+      stroke-dashoffset: 0;
+      fill-opacity: 0;
+    }
+    
+    20% {
+      fill-opacity: 0;
+      stroke-opacity: 1;
+    }
+  
+    40% {
+      stroke: var(--primary-white);
+      stroke-dashoffset: -301;
+      stroke-opacity: 0;
+    }
+  
+    60% {
+      fill-opacity: 1;
+      stroke-dashoffset: -301;
+    }
+    
+    95% {
+      fill-opacity: 1;
+      stroke-dashoffset: -301;
+    }
+  }
+  
+  @keyframes run {
+    80% {
+      transform: translateY(0);
+       opacity: 1;
+    }
+    100% {
+      transform: translateY(-300px);
+      opacity: 0;
+    }
+  }
