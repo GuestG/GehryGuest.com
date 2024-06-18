@@ -360,6 +360,16 @@ background-color: var(--primary-gold) !important;
   flex-direction: row;
 }
 
+.image-small-container {
+  display: block;
+  text-align: center;
+}
+
+#fun-image-small {
+  padding-bottom: 1rem;
+  font-size: 2rem;
+}
+
 
 .Project-Card-Tags {
   padding: 1rem 0rem;
@@ -390,6 +400,12 @@ background-color: var(--primary-gold) !important;
   -webkit-box-shadow: 0px 5px 40px -5px rgba(0,0,0,.5);
   -moz-box-shadow: 0px 5px 40px -5px rgba(0,0,0,.5);
   box-shadow: 0px 5px 40px -5px rgba(0, 0, 0, 0.11);
+  }
+
+  /* helldivers 2 */
+  #Helldiver-Image {
+    object-fit: contain;
+    background-color: #181818;
   }
 
 
@@ -423,10 +439,29 @@ background-color: var(--primary-gold) !important;
   animation-range-start: normal;
   }
 
-.Overview-Subtitle {
+.Overview-Subtitle-Project {
   margin: 0 auto;
+  padding-top: 1rem;
   padding-bottom: 1rem;
   max-width: 47.5ch;
+}
+
+.Overview-Subtitle-header {
+  margin: 0 auto;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  max-width: 47.5ch;
+}
+
+.Overview-Subtitle {
+  margin: 0 auto;
+  padding-top: 6rem;
+  padding-bottom: 1rem;
+  max-width: 47.5ch;
+}
+
+#overview-subtitle-first {
+  padding-top: 0rem;
 }
 
 .Project-Overview-Image-Container {
@@ -582,6 +617,7 @@ background-color: var(--primary-gold) !important;
 
 
 
+
 /*----------------------------------------------
   ------------------------------------------------
   6. Footer Styles
@@ -722,6 +758,7 @@ background-color: var(--primary-gold) !important;
   #fun-image {
     padding-bottom: 1rem;
   }
+
 
   .Project-Card-Tag { 
     margin-top: 1rem !important;
