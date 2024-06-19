@@ -715,6 +715,12 @@ background-color: var(--primary-gold) !important;
     .Case-Study-Image-Container {
       height: 15vh;
     }
+
+    #fun-image-small {
+      padding-bottom: 1rem;
+      width: 250px;
+    }
+    
   }
   
   /* Medium devices (tablets, 768px and up) */
