@@ -4,7 +4,7 @@
   --primary-white: #f8f8f8;
   --primary-blue: #0077cc;
   --primary-darks: #333333;
-  --primary-gold: #e0c351;
+  --primary-light-blue: #33aaff;
 }
 
 /*----------------------------------------------
@@ -83,7 +83,7 @@ h3 {
 }
 
 .logo:hover path {
-  fill: var(--primary-gold);
+  fill: var(--primary-light-blue);
   transition: fill 0.2s ease-in-out;
 }
 
@@ -190,18 +190,14 @@ h3 {
   color: var(--primary-white) !important;
   font-size: 20px !important;
   font-weight: 600;
+  padding: 5px 2rem !important;
   transition: all 200ms linear;
   animation: loading 1.2s 0s 1 both ease-in-out;
 }
 .nav-item:hover .nav-link {
-  color: var(--primary-gold) !important;
+  color: var(--primary-light-blue) !important;
 }
-/* .nav-item.active .nav-link {
-  color: var(--primary-gold) !important;
-} */
-.nav-link {
-  padding: 5px 1.25rem !important;
-}
+
 .nav-item:after {
   position: absolute;
   bottom: -5px;
@@ -209,7 +205,7 @@ h3 {
   width: 100%;
   height: 2px;
   content: "";
-  background-color: var(--primary-gold);
+  background-color: var(--primary-light-blue);
   opacity: 0;
   transition: all 200ms linear;
 }
@@ -258,12 +254,13 @@ display: none !important;
 }
 
 .dropdown-item {
-padding: 3px 15px !important;
-border-radius: 2px !important; 
-}
+  padding: 8px 15px !important;
+  border-radius: 2px !important; 
+  }
+
 .dropdown-item:hover, 
 .dropdown-item:focus {
-background-color: var(--primary-gold) !important;
+  background-color: #E3E3E3 !important;
 }
 
 /* #Primary style
@@ -663,7 +660,7 @@ background-color: var(--primary-gold) !important;
   }
   
   .External-Links:hover {
-    fill: var(--primary-gold);
+    fill: var(--primary-light-blue);
     cursor: pointer;
   }
   
@@ -687,7 +684,7 @@ background-color: var(--primary-gold) !important;
   }
   
   #Footer-Text-Links:hover {
-    color: var(--primary-gold);
+    color: var(--primary-light-blue);
     cursor: pointer;
   }
   
@@ -856,7 +853,9 @@ background-color: var(--primary-gold) !important;
     position: fixed;
     top: 0;
     left: 0;
-    background-color: #0077cc;
+    background-color: var(--primary-blue);
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.12'%3E%3Cpath opacity='.5' d='M96 95h4v1h-4v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9zm-1 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9z'/%3E%3Cpath d='M6 5V0H5v5H0v1h5v94h1V6h94V5H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  
     display: flex;
     justify-content: center;
     align-items: center;
@@ -870,7 +869,7 @@ background-color: var(--primary-gold) !important;
   }
   .load-logo * {
     fill: #fff;
-    stroke: var(--primary-gold);
+    stroke: var(--primary-white);
     stroke-width: 1;
     fill-opacity: 0;
     stroke-dasharray: 350;
