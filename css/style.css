@@ -740,12 +740,16 @@ background-color: #E3E3E3 !important;
   font-size: 4vh;
   font-weight: 600;
   color: var(--primary-darks);
+  text-shadow: -1px -1px 0 #fcfcf9, 1px -1px 0 #fcfcf9, 1px 1px 0 #fcfcf9,
+    1px 1px 0 #fcfcf9;
 }
 
 .Project-Card-Description {
   font-size: 20px;
   padding-top: 3%;
   max-width: 40ch;
+  background-color: #fcfcf9;
+  border-radius: 0.5rem;
 }
 
 .Project-Card-Tags {
